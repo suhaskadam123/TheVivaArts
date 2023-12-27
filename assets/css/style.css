@@ -70,6 +70,7 @@ a:hover,a:active,a:focus{
     text-align: center;
     overflow: hidden;
     margin-bottom: 70px;
+	
 }
 .block_title:before,.block_title:after {
     content: "";
@@ -539,6 +540,9 @@ header{
 .wordpress{
 	background-image: url(../images/wordpress.png);
 }
+.instagram{
+	background-image: url(../images/wordpress.png);
+}
 
 
 /* ///////////////////////////////////////////////////////////////////// 
@@ -705,3 +709,8 @@ footer {
 	    left: 44%;
 	}
 }
+.navbar-brand {
+	position: absolute;
+	
+	
+  }
