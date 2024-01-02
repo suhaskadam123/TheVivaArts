@@ -189,8 +189,8 @@
         <div id='whatsapp-chat' class='hide'>
             <div class='header-chat'>
               <div class='head-home'>
-                <div class='info-avatar'><img src='https://files.elfsight.com/storage/9274ed8b-a2e8-4cf8-a4cf-fad383377f2b/7b75090c-19a2-452b-9d6b-c2a51ad4916f.jpeg' /></div>
-                <p><span class="whatsapp-name">Tedbree</span><br><small>Typically replies within an hour</small></p>
+                <div class='info-avatar'><img src='assets\images\logo.jpg' /></div>
+                <p><span class="whatsapp-name">the viva arts</span><br><small>Typically replies within an hour</small></p>
           
               </div>
               <div class='get-new hide'>
@@ -212,9 +212,9 @@
                     </div>
                   </div>
                   <div style="opacity: 1;" class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq">
-                    <div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">Tedbree</div>
+                    <div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">the vivaarts</div>
                     <div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">Hi there 👋<br><br>How can I help you?</div>
-                    <div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>
+                    
                   </div>
                 </div>
               </div>
@@ -247,6 +247,57 @@
         <script src="assets/js/owl.carousel.js"></script>
         <script src="assets/js/script.js"></script>
 
+
+        <script>
+            /* Whatsapp Chat Widget by www.bloggermix.com */
+$(document).on("click", "#send-it", function() {
+  var a = document.getElementById("chat-input");
+  if ("" != a.value) {
+    var b = $("#get-number").text(),
+      c = document.getElementById("chat-input").value,
+      d = "https://web.whatsapp.com/send",
+      e = b,
+      f = "&text=" + c;
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    )
+      var d = "whatsapp://send";
+    var g = d + "?phone=+91 9673804898" + e + f;
+    window.open(g, "_blank");
+  }
+}),
+  $(document).on("click", ".informasi", function() {
+    (document.getElementById("get-number").innerHTML = $(this)
+      .children(".my-number")
+      .text()),
+      $(".start-chat,.get-new")
+        .addClass("show")
+        .removeClass("hide"),
+      $(".home-chat,.head-home")
+        .addClass("hide")
+        .removeClass("show"),
+      (document.getElementById("get-nama").innerHTML = $(this)
+        .children(".info-chat")
+        .children(".chat-nama")
+        .text()),
+      (document.getElementById("get-label").innerHTML = $(this)
+        .children(".info-chat")
+        .children(".chat-label")
+        .text());
+  }),
+  $(document).on("click", ".close-chat", function() {
+    $("#whatsapp-chat")
+      .addClass("hide")
+      .removeClass("show");
+  }),
+  $(document).on("click", ".blantershow-chat", function() {
+    $("#whatsapp-chat")
+      .addClass("show")
+      .removeClass("hide");
+  });
+        </script>
     </body>
 </html>
 
